@@ -9,7 +9,7 @@
 <body>
 	<center><h2>FORM DAFTAR WEB BERITA</h2></center>
 	<div class="login">
-		<form action="#" method="POST" onsubmit="validasi()">
+		<form action="#" method="POST" onsubmit="validasi()" name="myForm">
 			<div>
 				<label>
 					Nama :
@@ -23,7 +23,7 @@
 			<div>
 				<label>Email :
 				</label>
-				<input type="email" name="email" id="email">
+				<input type="email" name="EMail" id="email">
 			</div>
 			<div>
 				<label>Alamat :</label>
@@ -43,10 +43,22 @@
 			var alamat =document.getElementsById("alamat").value;
 			if(nama != "" && password !="" && email !="" && alamat !=""){
 				return true;
-				alert('')
+				alert('Akun anda sudah terdaftar!')
 			}else{
 				alert('Anda harus mengisi data dengan lengkap!');
 			}
+
+		}
+		function validasiEmail(){
+			var emailID=document.myform.EMail.value;
+			atpos =emailID.indexOf("@");
+			dotpos =emailID.lastIndexOf(".");
+			if(atpos<1 || (dotpos - atpos < 2 )){
+				alert("Masukkan email yang benar")
+				document.myForm.EMail.focus();
+				return false;
+			}
+			return (true);
 		}
 	</script>
 </html>
