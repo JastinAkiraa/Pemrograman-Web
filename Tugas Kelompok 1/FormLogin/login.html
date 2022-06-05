@@ -4,18 +4,30 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Login Form |</title>
+	<script type="text/javascript">
+		function login() {
+			var user = document.getElementById("Username").value;
+			var pass = document.getElementById("password").value;
+
+			if(user=="admin" && pass=="123"){
+				alert('Selamat Anda Berhasil Login');
+			}else{
+				alert('Username dan password anda salah');
+			}
+		}
+	</script>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 		<div class="container">
 			<h1>Login Form Berita</h1>
 			<form action="#">
-				<input type="text" placeholder="Username" required>
-				<input type="password" placeholder="Password" required>
+				<input type="text" name="user" id="Username" placeholder="Username" required>
+				<input type="password" name="pass" id="password" placeholder="Password" required>
 				<a href="#" class="p-link">Forget password?</a>
-				<input class="btn" type="submit" name="login" value="Login">
+				<input class="btn" type="submit" name="login" value="Login" onclick="login">
 					<div class="signup-link">
-						Not a member? <a href="#">Daftar</a>
+						Not a member? <a href="../FormDaftar/daftar.html">Daftar</a>
 					</div>
 			</form>
 		</div>

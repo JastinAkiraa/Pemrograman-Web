@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Form Daftar Web Berita</title>
+	<link rel="stylesheet" type="text/css" href="stylee.css">
+</head>
+<body>
+	<center><h2>FORM DAFTAR WEB BERITA</h2></center>
+	<div class="login">
+		<form action="#" method="POST" onsubmit="validasi()">
+			<div>
+				<label>
+					Nama :
+				</label>
+				<input type="text" name="nama" id="nama">
+			</div>
+			<div>
+				<label>Password :</label>
+				<input type="password" name="pass" id="pass">
+			</div>
+			<div>
+				<label>Email :
+				</label>
+				<input type="email" name="email" id="email">
+			</div>
+			<div>
+				<label>Alamat :</label>
+				<textarea cols="30" rows="5" name="alamat" id="alamat"></textarea>
+			</div>
+			<div>
+				<input type="submit" value="Daftar" class="tombol">
+			</div>
+		</form>
+	</div>
+</body>
+	<script type="text/javascript">
+		function validasi(){
+			var nama = document.getElementsById("nama").value;
+			var password = document.getElementsById("pass").value
+			var email =document.getElementsById("email").value;
+			var alamat =document.getElementsById("alamat").value;
+			if(nama != "" && password !="" && email !="" && alamat !=""){
+				return true;
+				alert('')
+			}else{
+				alert('Anda harus mengisi data dengan lengkap!');
+			}
+		}
+	</script>
+</html>
